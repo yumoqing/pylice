@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pylice"
+version = "1.0.0"
+description = "单文件离线软件授权：Ed25519 签名 + 机器指纹 + 功能位 + 到期 + 心跳宽限（零第三方依赖）"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "yu moqing", email = "yumoqing@gmail.com" }]
+requires-python = ">=3.8"
+dependencies = []
+keywords = ["license", "licensing", "offline", "ed25519", "on-premise", "activation"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Security :: Cryptography",
+]
+
+[project.scripts]
+lice = "pylice:main"
+
+[project.urls]
+Homepage = "https://github.com/yumoqing/pylice"
+
+[tool.setuptools]
+py-modules = ["pylice"]
